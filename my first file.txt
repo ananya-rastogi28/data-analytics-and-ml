@@ -1,0 +1,83 @@
+Here’s a **Git commands cheat sheet** — especially useful if you’re starting out:
+
+### 🔧 Setup
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+git config --list
+```
+
+### 📁 Create / Get a Repository
+
+```bash
+git init                    # Initialize Git in a folder
+git clone <repo-url>        # Download an existing repository
+```
+
+### 📌 Check & Track Changes
+
+```bash
+git status                  # See what's changed
+git add <file>              # Stage a specific file
+git add .                   # Stage all changes
+git diff                    # See unstaged changes
+git diff --staged           # See staged changes
+```
+
+### 💾 Commit
+
+```bash
+git commit -m "message"     # Save staged changes
+git log                     # View commit history
+git log --oneline           # Compact history
+```
+
+### 🌿 Branches
+
+```bash
+git branch                  # List branches
+git branch <name>           # Create branch
+git switch <name>           # Switch branch
+git switch -c <name>        # Create + switch
+git merge <name>            # Merge branch into current branch
+```
+
+### ☁️ GitHub / Remote
+
+```bash
+git remote -v               # View connected remote
+git remote add origin <url> # Connect local repo to GitHub
+
+git push -u origin main     # Push main branch
+git push                    # Push future commits
+git pull                    # Get + merge latest changes
+git fetch                   # Get updates without merging
+```
+
+### ↩️ Undo / Fix
+
+```bash
+git restore <file>          # Discard unstaged changes
+git restore --staged <file> # Unstage a file
+git revert <commit>         # Safely undo a commit
+```
+
+### ⭐ Most important workflow
+
+```text
+Edit files
+   ↓
+git status
+   ↓
+git add .
+   ↓
+git commit -m "what I changed"
+   ↓
+git push
+```
+
+**If you're learning Git for college/projects, memorize these first:**
+
+`git clone` → `git status` → `git add` → `git commit` → `git push` → `git pull` → `git branch` → `git switch` → `git merge`
